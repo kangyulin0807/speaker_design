@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101819">
+  <meta name="description" content="Speaker Design Atlas：用互動剖面圖理解音箱結構、單體、功放與 DSP。">
+  <title>Speaker Design Atlas — 音響設計百科</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Speaker Design Atlas 首頁"><span class="brand-icon" aria-hidden="true"><span></span></span><span>SPEAKER<span class="brand-light"> DESIGN</span><br>ATLAS<span class="brand-dot">.</span></span></a>
+    <nav aria-label="主要導覽"><a href="#structures">箱體結構</a><a href="#system">系統地圖</a><a href="#method">製作方法</a></nav>
+    <span class="header-mark">ACOUSTIC FIELD NOTES / 001</span>
+  </header>
+
+  <main id="top">
+    <section class="hero page-width" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> AUDIO ENGINEERING, MADE VISIBLE</p>
+        <h1 id="hero-title">聲音如何<br><em>被設計</em>出來<span class="period">.</span></h1>
+        <p class="hero-subtitle">從一只音箱的內部開始，拆解聲波、空氣與電路之間的關係。用互動圖解，建立你的音響設計直覺。</p>
+        <a class="primary-link" href="#structures">探索箱體結構 <span aria-hidden="true">↗</span></a>
+        <div class="hero-meta"><span>01 — 03<br><strong>箱體結構</strong></span><span>DRIVER / AMP / DSP<br><strong>系統基礎</strong></span><span>OPEN LAB<br><strong>持續擴充</strong></span></div>
+      </div>
+      <div class="hero-visual" aria-label="音箱剖面與聲波示意圖">
+        <div class="hero-circle circle-one"></div><div class="hero-circle circle-two"></div><div class="hero-circle circle-three"></div>
+        <div class="hero-cabinet"><div class="hero-driver outer"><div class="hero-driver middle"><div class="hero-driver inner"></div></div></div><div class="cabinet-line"></div></div>
+        <div class="wave wave-a"></div><div class="wave wave-b"></div><div class="wave wave-c"></div>
+        <span class="visual-label label-one">01 / DIAPHRAGM</span><span class="visual-label label-two">AIR VOLUME ↗</span><span class="visual-caption">THE ENCLOSURE<br>IS AN INSTRUMENT.</span>
+      </div>
+    </section>
+
+    <section class="intro-band" aria-label="網站定位"><div class="page-width band-inner"><span>THE ATLAS / 音響設計百科</span><p>不是只有外觀不同。<strong>每一種箱體，都是對聲波的一種安排。</strong></p><span>SCROLL TO EXPLORE ↓</span></div></section>
+
+    <section id="structures" class="structures page-width" aria-labelledby="structures-title">
+      <div class="section-top"><div><p class="kicker">CHAPTER 01 / ENCLOSURES</p><h2 id="structures-title">三種箱體，<br>三條低頻路徑<span class="period">.</span></h2></div><p>點選結構，觀察聲波在箱體內的不同旅程。每張卡片都由同一份內容規格生成。</p></div>
+      <div id="structure-tabs" class="structure-tabs" role="tablist" aria-label="選擇音箱結構"></div>
+      <div id="structure-panel" class="structure-panel" role="tabpanel" aria-live="polite"></div>
+    </section>
+
+    <section id="system" class="system-section" aria-labelledby="system-title"><div class="page-width">
+      <div class="section-top system-head"><div><p class="kicker">CHAPTER 02 / THE SIGNAL CHAIN</p><h2 id="system-title">箱體之外，<br>還有整個系統<span class="period">.</span></h2></div><p>聲音成果來自機械、電力與訊號處理的共同設計。從左到右，追蹤音樂如何變成空氣振動。</p></div>
+      <div class="signal-chain" aria-label="訊號流程：DSP、功放、單體、箱體">
+        <article><span class="chain-index">01 / SIGNAL</span><div class="chain-symbol dsp-symbol" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><h3>DSP <small>數位訊號處理</small></h3><p>用分音、等化與延遲調整訊號；也可加入保護濾波。設定必須配合單體與箱體的實測表現。</p></article>
+        <article><span class="chain-index">02 / POWER</span><div class="chain-symbol amp-symbol" aria-hidden="true">∿<span>→</span>∿</div><h3>AMP <small>功率放大</small></h3><p>將低功率訊號轉成驅動單體的電壓與電流。功率、阻抗與散熱需一起考慮。</p></article>
+        <article><span class="chain-index">03 / MOTION</span><div class="chain-symbol driver-symbol" aria-hidden="true"><i></i></div><h3>DRIVER <small>揚聲器單體</small></h3><p>音圈與磁場推動振膜，將電能轉成空氣振動。T/S 參數是箱體選型的重要起點。</p></article>
+        <article><span class="chain-index">04 / ACOUSTICS</span><div class="chain-symbol cabinet-symbol" aria-hidden="true"><i></i></div><h3>BOX <small>聲學箱體</small></h3><p>箱體管理單體背波、空氣彈性與共振。結構、材料與幾何形狀都會改變結果。</p></article>
+      </div>
+    </div></section>
+
+    <section id="method" class="method page-width" aria-labelledby="method-title"><div><p class="kicker">THE METHOD / 可延伸的知識庫</p><h2 id="method-title">一套規則，<br>持續長出新的圖解<span class="period">.</span></h2></div><div class="method-copy"><p>新增一種箱體時，AI 依照 <code>AGENTS.md</code> 的欄位與查核流程，整理原理、設計參數、優缺點，再選擇或建立對應的互動剖面圖。資料加入後，網站會自動產生導覽與內容版面。</p><p class="method-note">本頁互動用於理解聲學機制，不提供實際音箱的量測或精確模擬結果。</p><a href="AGENTS.md" class="text-link">閱讀專案規則 <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer><div class="page-width footer-inner"><span>SPEAKER DESIGN ATLAS<span class="brand-dot">.</span></span><span>聲音，從理解開始。</span><a href="#top">BACK TO TOP ↑</a></div></footer>
+</body>
+</html>
